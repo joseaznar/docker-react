@@ -12,5 +12,5 @@ RUN npm run build
 
 # second phase that starts nginx and import the previous build
 FROM nginx
-
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
